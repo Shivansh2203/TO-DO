@@ -1,54 +1,98 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-main{
+
+main {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(88, 207, 247);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: cursive;
+    padding: 20px;
 }
-.box{
-    height: 500px;
-    width: 450px;
-    background-color: rgb(182, 221, 238);
-    border: 5px;
-    border-color: black;
-    padding: 15px;
+
+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    padding-bottom: 2px;
+    font-size: large;
+    font-weight: 600;
 }
-#item{
+
+.box {
+    max-height: 90vh;
     width: 100%;
-    font-size: 20px;
+    max-width: 450px;
+    background-color: rgb(182, 221, 238);
+    border: 5px solid black;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+#item {
+    width: 100%;
+    font-size: 1rem;
     border: 0;
     outline: 0;
     font-weight: lighter;
     display: block;
     box-shadow: 0px 5px 10px rgb(28, 28, 28);
+    padding: 10px;
+    border-radius: 5px;
 }
-#to-do-box{
+
+#to-do-box {
     margin-top: 20px;
     list-style: none;
 }
-#to-do-box li{
+
+#to-do-box li {
     position: relative;
     color: rgb(224, 237, 248);
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: rgb(42, 41, 40);
-    padding-right:30px;
+    padding: 10px 30px 10px 10px;
     text-align: justify;
     margin-top: 10px;
     user-select: none;
+    font-size: 1rem;
+    word-break: break-word;
 }
-#to-do-box li i{
+
+#to-do-box li i {
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
 }
-.done{
+
+.done {
     text-decoration: line-through;
     color: black;
-    background-color: rgb(79, 78, 78)!important;
+    background-color: rgb(79, 78, 78) !important;
+}
+
+@media (max-width: 600px) {
+    .box {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    #item {
+        font-size: 0.9rem;
+    }
+
+    #to-do-box li {
+        font-size: 0.9rem;
+        padding: 10px 25px 10px 10px;
+    }
 }
